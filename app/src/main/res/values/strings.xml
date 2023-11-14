@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Market_project</string>
+    <string name="format_codigo">Código: %d</string>
+    <string name="campos_obrigatorios">Todos os campos são obrigatórios</string>
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso!</string>
+    <string name="codigo_ja_cadastrado">Código já cadastrado. Escolha outro código.</string>
+</resources>
