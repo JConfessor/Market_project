@@ -4,4 +4,5 @@
     <string name="campos_obrigatorios">Todos os campos são obrigatórios</string>
     <string name="cadastro_sucesso">Cadastro realizado com sucesso!</string>
     <string name="codigo_ja_cadastrado">Código já cadastrado. Escolha outro código.</string>
+    <string name="label_excluir_selecionados">Excluir Selecionados</string>
 </resources>

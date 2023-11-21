@@ -1,6 +1,7 @@
 package br.imd.ufrn.market_project;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -8,7 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import br.imd.ufrn.market_project.SQLiteHelper;
 
 public class EdicaoProdutoActivity extends AppCompatActivity {
 
@@ -101,11 +105,21 @@ public class EdicaoProdutoActivity extends AppCompatActivity {
         // Exibir mensagem de sucesso ou falha
         if (result > 0) {
             Toast.makeText(this, "Produto atualizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+            // Configurar os dados a serem retornados
+            Intent resultadoIntent = new Intent();
+            resultadoIntent.putExtra("codigo_produto", codigoProduto);
+            resultadoIntent.putExtra("nome", nome);
+            resultadoIntent.putExtra("descricao", descricao);
+            resultadoIntent.putExtra("estoque", Integer.parseInt(estoque));
+
+            // Definir o resultado da atividade como RESULT_OK e fornecer os dados
+            setResult(RESULT_OK, resultadoIntent);
+
+            // Fechar esta atividade
+            finish();
         } else {
             Toast.makeText(this, "Falha ao atualizar o produto.", Toast.LENGTH_SHORT).show();
         }
-
-        // Fechar esta atividade
-        finish();
     }
 }

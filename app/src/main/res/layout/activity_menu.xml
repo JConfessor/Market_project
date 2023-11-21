@@ -1,42 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333">
-
-    <Button
-        android:id="@+id/btnCadastrarProduto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar Produto"
-        android:layout_marginTop="50dp"
-        android:padding="10dp"/>
+    android:background="#333333"
+    android:backgroundTint="#FFFFFF">
 
     <Button
         android:id="@+id/btnListarProdutos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar Produtos"
-        android:layout_below="@id/btnCadastrarProduto"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:padding="10dp"/>
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Listar Produtos"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarProduto"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
-        android:id="@+id/btnAlterarProduto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alterar Produto"
-        android:layout_below="@id/btnListarProdutos"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"/>
+        android:id="@+id/btnCadastrarProduto"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="212dp"
+        android:backgroundTint="#9E0707"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Cadastrar Produto"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
         android:id="@+id/btnDeletarProdutos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Deletar Produtos"
-        android:layout_below="@id/btnAlterarProduto"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:padding="10dp"/>
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Deletar Produtos"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAlterarProduto"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnAlterarProduto"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-medium"
+        android:padding="10dp"
+        android:text="Alterar Produto"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnListarProdutos"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="119dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="131dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeletarProdutos"
+        app:srcCompat="@drawable/screenshot_40" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="O QUE DESEJA FAZER?"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screenshot_42" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
